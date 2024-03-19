@@ -68,6 +68,7 @@ import javax.swing.*;
 			}
 			else{
 				try {
+					//git commit
 					datacon c = new datacon();
                     String query = "insert into bank values('"+pinnumber+"','"+date+"','Deposit','"+num+"')";
 					c.stmt.executeUpdate(query);
