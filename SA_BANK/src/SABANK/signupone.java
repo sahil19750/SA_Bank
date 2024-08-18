@@ -216,9 +216,12 @@ public class signupone extends JFrame implements ActionListener {
 		String state = statefield.getText();
 		String pincode = pinfield.getText();
 		String phoneno = phonefield.getText();
+		
+		String regex = ".*[0-9\\W_].*";
 
 		try {
-			if(name.equals("")) {
+			if(name.equals("") ||  name.matches(regex)) {
+				
 				JOptionPane.showMessageDialog(null, "Name can't be empty ");
 			}
 			else if(fname.equals("")) {
